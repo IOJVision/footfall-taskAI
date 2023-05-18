@@ -6,7 +6,7 @@ This repository showcases a project that applies a custom YOLOv5 model to detect
 
 This is the video showing the solution prediction of the detected tags.
 
-<video width="320" height="240" controls>
+<video width="960" height="720" controls>
   <source src="comp_solution_pred.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>
