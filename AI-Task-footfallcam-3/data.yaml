@@ -1,0 +1,12 @@
+names:
+- work-tag
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: ai-task-footfallcam
+  url: https://universe.roboflow.com/azri-izzul-4qda7/ai-task-footfallcam/dataset/3
+  version: 3
+  workspace: azri-izzul-4qda7
+test: /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/test/images
+train: /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/train/images
+val: /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/valid
