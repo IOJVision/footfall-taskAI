@@ -4,12 +4,12 @@ This repository showcases a project that applies a custom YOLOv5 model to detect
 
 ## Solution Prediction Video
 
-This is the video showing the solution prediction of the detected tags.
+This is a gif preview showing the solution prediction of the detected tags:
 
-<video width="960" height="720" controls>
-  <source src="comp_solution_pred.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+![Solution Prediction Gif](comp_solution_pred.gif)
+
+For the full video, please access it [here](https://github.com/IOJVision/footfall-taskAI/blob/main/comp_solution_pred.mp4).
+
 
 ## Setup and Installation
 
