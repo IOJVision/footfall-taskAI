@@ -59,6 +59,23 @@ python val.py --weights /content/drive/MyDrive/footfall/yolov5/runs/train-seg/ex
 
 2. Predict using the trained model.
 
+# Custom Predict.py Usage
+
+To leverage the customized predict.py script used in this repository for tag detection:
+
+1. Clone the original YOLOv5 repository by Ultralytics. Run the following command in your terminal:
+
+```bash
+git clone https://github.com/ultralytics/yolov5
+```
+
+2. Download the custom [predict.py](https://github.com/IOJVision/footfall-taskAI/blob/main/predict.py) script from this repository.
+
+3. Replace the original `predict.py` located in the `yolov5/segment` directory of the cloned YOLOv5 repository with the custom `predict.py` script you've just downloaded. 
+
+Now, you are ready to use the YOLOv5 with the custom `predict.py` for improved tag detection performance.
+
+
 ```bash
 python predict.py --weights /content/drive/MyDrive/footfall/yolov5/runs/train-seg/exp3/weights/best.pt --conf 0.25 --source /content/drive/MyDrive/footfall/sample.mp4 --name exp1805
 ```
