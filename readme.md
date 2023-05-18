@@ -80,6 +80,38 @@ Now, you are ready to use the YOLOv5 with the custom `predict.py` for improved t
 python predict.py --weights /content/drive/MyDrive/footfall/yolov5/runs/train-seg/exp3/weights/best.pt --conf 0.25 --source /content/drive/MyDrive/footfall/sample.mp4 --name exp1805
 ```
 
+
+Here's how you can write the instructions to modify the `data.yaml` file for users to fit their specific needs:
+
+
+## Customizing [data.yaml](https://github.com/IOJVision/footfall-taskAI/blob/main/AI-Task-footfallcam-3/data.yaml) in AI-Taks-footfallcam-3
+
+The provided `data.yaml` is configured for the specific use-case of this repository, but you may need to modify it to fit your specific needs. 
+
+```yaml
+names:
+- work-tag
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: ai-task-footfallcam
+  url: https://universe.roboflow.com/azri-izzul-4qda7/ai-task-footfallcam/dataset/3
+  version: 3
+  workspace: azri-izzul-4qda7
+test: /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/test/images
+train: /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/train/images
+val: /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/valid
+```
+
+In the above `data.yaml` file:
+
+- `names` should be a list of class names in your dataset.
+- `nc` should be the number of classes in your dataset.
+- The `roboflow` section contains metadata about the project and can be left as is.
+- `test`, `train`, and `val` should point to the respective directories that contain your testing, training, and validation image sets. Update these to point to the correct paths if your directories are different.
+
+Once you've edited your `data.yaml` file, save it and you're ready to proceed!
+
 ---
 
 If you have any issues, please create a new issue in the repository. We welcome pull requests and any other contributions.
