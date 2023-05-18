@@ -16,7 +16,7 @@ For the full video, please access it [here](https://github.com/IOJVision/footfal
 1. Navigate to your project directory.
 
 ```bash
-cd /content/drive/MyDrive/footfall
+cd /footfall-taskAI
 ```
 
 2. Clone the YOLOv5 repository and install the required dependencies.
@@ -40,13 +40,13 @@ display = utils.notebook_init()
 
 ```bash
 cd yolov5/segment
-python train.py --img 640 --batch 128 --epochs 50 --data /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/data.yaml --weights yolov5s-seg.pt --name exp3
+python train.py --img 640 --batch 128 --epochs 50 --data AI-Task-footfallcam-3/data.yaml --weights yolov5s-seg.pt --name exp3
 ```
 
 3. Upon completion of the training, visualize the results.
 
 ```python
-display.Image(filename='/content/drive/MyDrive/footfall/yolov5/runs/train-seg/exp3/results.png', width=1200)
+display.Image(filename='yolov5/runs/train-seg/exp3/results.png', width=1200)
 ```
 
 ## Validation and Prediction
@@ -54,7 +54,7 @@ display.Image(filename='/content/drive/MyDrive/footfall/yolov5/runs/train-seg/ex
 1. Validate the trained model.
 
 ```bash
-python val.py --weights /content/drive/MyDrive/footfall/yolov5/runs/train-seg/exp3/weights/best.pt --data /content/drive/MyDrive/footfall/AI-Task-footfallcam-2/data.yaml --img 640  --name exp3
+python val.py --weights yolov5/runs/train-seg/exp3/weights/best.pt --data AI-Task-footfallcam-2/data.yaml --img 640  --name exp3
 ```
 
 2. Predict using the trained model.
@@ -77,7 +77,7 @@ Now, you are ready to use the YOLOv5 with the custom `predict.py` for improved t
 
 
 ```bash
-python predict.py --weights /content/drive/MyDrive/footfall/yolov5/runs/train-seg/exp3/weights/best.pt --conf 0.25 --source /content/drive/MyDrive/footfall/sample.mp4 --name exp1805
+python predict.py --weights yolov5/runs/train-seg/exp3/weights/best.pt --conf 0.25 --source sample.mp4 --name exp1805
 ```
 
 
@@ -98,9 +98,9 @@ roboflow:
   url: https://universe.roboflow.com/azri-izzul-4qda7/ai-task-footfallcam/dataset/3
   version: 3
   workspace: azri-izzul-4qda7
-test: /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/test/images
-train: /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/train/images
-val: /content/drive/MyDrive/footfall/AI-Task-footfallcam-3/valid
+test: /AI-Task-footfallcam-3/test/images
+train: /AI-Task-footfallcam-3/train/images
+val: /AI-Task-footfallcam-3/valid
 ```
 
 In the above `data.yaml` file:
